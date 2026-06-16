@@ -1,11 +1,15 @@
-#include<stdio.h>
+# include<stdio.h>
 int main()
 {
-    int num;
-    printf("enter the number");
-    scanf("%d",&num);
-    printf("multiplication table %d",num);
-    for(int i =1; i<= 10;i++)
-    printf("%d*%d =%d\n",num,i,num*i);
+    int n,remainder,reversed=0;
+    printf("enter the positive  number");
+    scanf("%d",&n);
+    while(n!=0)
+    {
+        remainder=n%10;
+        reversed=reversed*10+remainder;
+        n=n/10;
+    }
+    printf("enter the reversed number+%d",&reversed);
     return 0;
 }

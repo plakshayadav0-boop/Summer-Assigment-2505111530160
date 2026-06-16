@@ -1,13 +1,13 @@
-#include<stdio.h>
-int main ()
+# include<stdio.h>
+int main()
 {
-  int n,sum=0;
-  printf("Enter the the positive integer n");
-  scanf("%d",&n); 
-{
-  for(int i=1;i<=n;i++)
-  sum = sum+i;
-}
-  printf("sum of n natural numbers is %d",sum);
+  int n,sum=0,remainder;
+  printf("enter the positive integer n");
+  scanf("%d",&n);
+  while (n!=0)
+  remainder=n%10;
+  sum=sum+remainder;
+  n=n/10;
+  printf("sum of digits of a number=%d",&sum);
   return 0;
 }
